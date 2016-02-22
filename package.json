@@ -10,7 +10,7 @@
     "predev": "rm -rf dist && mkdir dist",
     "dev": "webpack-dev-server --config dev.config.js",
     "dist": "webpack --config dist.config.js --progress --colors",
-    "dist:min": "webpack --config webpackDist.config.js --progress --colors --optimize-minimize --optimize-occurence-order --optimize-dedupe",
+    "dist:min": "webpack --config dist.min.config.js --progress --colors --optimize-minimize --optimize-occurence-order --optimize-dedupe",
     "test": "ava 'app/**/*.test.js' --verbose --require ./other/setup-ava-tests.js",
     "cover": "nyc --require babel-core/register --require babel-polyfill --reporter=lcov --reporter=text --reporter=html npm run test",
     "check-coverage": "nyc check-coverage --statements 100 --branches 100 --functions 100 --lines 100"
