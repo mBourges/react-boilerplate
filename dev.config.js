@@ -9,7 +9,7 @@ var ROOT_PATH = path.resolve(__dirname);
 module.exports = {
     devtool: 'source-map', 
     entry: [
-        path.resolve(ROOT_PATH, 'src/index'),
+        path.resolve(ROOT_PATH, 'app/index'),
     ],
     module: {
         loaders: [{

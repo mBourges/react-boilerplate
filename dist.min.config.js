@@ -1,34 +1,39 @@
+var webpack = require('webpack');
+
+var path = require('path');  
+var HtmlwebpackPlugin = require('html-webpack-plugin');
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
+
+var ROOT_PATH = path.resolve(__dirname);
+
 module.exports = {
-    entry: './src/index.js',
-    output: {
-        path         : __dirname + "/dist",
-        libraryTarget: 'umd',
-        library      : 'ReactLookup',
-        filename     : 'bundle.min.js'
-    },
-    externals: {
-        'react': true,
-        'react-dom': true,
-        'immutable': true,
-        'rx': true,
-        'classnames': true
+    devtool: 'source-map', 
+    entry: [
+        path.resolve(ROOT_PATH, 'app/index'),
+    ],
+    module: {
+        loaders: [{
+            test: /\.js?$/,
+            exclude: /node_modules/,
+            loaders: ['react-hot', 'babel']
+        }, {
+            test: /\.css$/,
+            loader: ExtractTextPlugin.extract("style-loader", "css-loader")
+        }]
     },
     resolve: {
-        // Allow to omit extensions when requiring these files
         extensions: ['', '.js', '.jsx']
     },
-    module: {
-        loaders: [
-			{
-				test: /\.jsx?$/,
-				exclude: /(node_module|bower_components)/,
-				loader: 'babel',
-				query: {
-				    compact: false,
-                    cacheDirectory: true,
-                    presets: ['es2015', 'react']
-                }
-			}
-		]
-    }
+    output: {
+        path: path.resolve(ROOT_PATH, 'dist'),
+        filename: 'bundle.min.js'
+    },
+    plugins: [
+        new webpack.HotModuleReplacementPlugin(),
+        new ExtractTextPlugin("style.css"),
+        new HtmlwebpackPlugin({
+            filename: 'index.html',
+            title: 'Issue Management'
+        })
+    ]
 };
