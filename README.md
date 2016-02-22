@@ -1,0 +1,1 @@
+[![travis build](https://img.shields.io/travis/mBourges/react-boilerplate.svg?style=flat-square)](https://travis-ci.org/mBourges/react-boilerplate)
