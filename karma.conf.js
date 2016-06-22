@@ -14,6 +14,7 @@ module.exports = function(config) {
     basePath: '',
     frameworks: ['mocha', 'chai'],
     files: [
+      './node_modules/es6-promise/dist/es6-promise.js',
       testGlob,
       srcGlob
     ],

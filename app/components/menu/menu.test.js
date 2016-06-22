@@ -5,7 +5,7 @@ describe('A test suite', () => {
 
   afterEach(() => {});
 
-  it('should fail2', () => {
-    expect(true).to.be.false;
+  it('should fail', () => {
+    expect(true).to.be.true;
   });
 });
