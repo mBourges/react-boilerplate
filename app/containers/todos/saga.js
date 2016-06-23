@@ -7,7 +7,7 @@ import { fetchTodosSuccess, fetchTodosError } from './actions';
 import request from '../../utils/request';
 
 export function* getTodos() {
-  const requestURL = 'todos';
+  const requestURL = '/todos';
 
   const todos = yield call(request, requestURL);
 
