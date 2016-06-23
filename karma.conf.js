@@ -15,6 +15,7 @@ module.exports = function(config) {
     frameworks: ['mocha', 'chai'],
     files: [
       './node_modules/es6-promise/dist/es6-promise.js',
+      './node_modules/babel-polyfill/dist/polyfill.min.js',
       testGlob,
       srcGlob
     ],

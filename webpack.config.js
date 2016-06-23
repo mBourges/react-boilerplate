@@ -10,7 +10,9 @@ module.exports = (env) => {
   return {
     entry: {
       app: './index.js',
-      vendor: ['react', 'react-dom', 'react-router']
+      vendor: ['babel-polyfill', 'immutable', 'classnames', 'history', 'reselect', 'whatwg-fetch'],
+      react: ['react', 'react-dom', 'react-router'],
+      redux: ['redux', 'react-redux', 'react-router-redux', 'redux-immutable', 'redux-saga']
     },
     output: {
       filename: 'bundle.[name].js',
