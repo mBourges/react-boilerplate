@@ -53,6 +53,7 @@
     "karma-webpack": "^1.7.0",
     "mocha": "^2.5.3",
     "nodemon": "^1.9.2",
+    "npm-run-all": "^2.2.0",
     "path": "^0.12.7",
     "phantomjs-prebuilt": "^2.1.7",
     "style-loader": "^0.13.1",
