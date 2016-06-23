@@ -10,9 +10,9 @@ const TodoList = ({ todos }) => {
     />
   ));
 
-  return (<ul>
+  return (<div className="ui relaxed divided list">
     { todoList }
-  </ul>);
+  </div>);
 };
 
 TodoList.propTypes = {

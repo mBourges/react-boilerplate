@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 
 const TotoListItem = ({ Title, Completed }) => {
-  const itemClassName = classNames({
+  const itemClassName = classNames('item', {
     completed: Completed
   });
 
