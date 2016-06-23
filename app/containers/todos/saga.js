@@ -7,7 +7,7 @@ import { fetchTodosSuccess, fetchTodosError } from './actions';
 import request from '../../utils/request';
 
 export function* getTodos() {
-  const requestURL = 'https://forgapp-mbourges.c9users.io:8080/api/todos';
+  const requestURL = 'todos';
 
   const todos = yield call(request, requestURL);
 

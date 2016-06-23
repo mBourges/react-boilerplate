@@ -10,7 +10,7 @@ process.env.BABEL_ENV = 'test';
 module.exports = function(config) {
   config.set({
     hostname: process.env.IP || 'localhost',
-    port: '8081',
+    port: '8082',
     basePath: '',
     frameworks: ['mocha', 'chai'],
     files: [
@@ -20,6 +20,10 @@ module.exports = function(config) {
       srcGlob
     ],
     exclude: [
+      'app/reducer.js',
+      'app/routes.js',
+      'app/store.js',
+      'app/index.js'
     ],
     preprocessors: {
       [testGlob]: ['webpack'],

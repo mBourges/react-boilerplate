@@ -1,7 +1,10 @@
 import 'whatwg-fetch';
 
+const API_URL = process.env.API_URL
+    || 'https://forgapp-mbourges.c9users.io:8080/api/';
+
 export default function request(url, options) {
-  return fetch(url, options)
+  return fetch(API_URL + url, options)
     .then(checkStatus)
     .then(parseJSON)
     .then((data) => ({ data }))
