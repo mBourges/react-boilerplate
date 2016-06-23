@@ -9,7 +9,7 @@ process.env.BABEL_ENV = 'test';
 
 module.exports = function(config) {
   config.set({
-    hostname: process.env.IP,
+    hostname: process.env.IP || 'localhost',
     port: '8081',
     basePath: '',
     frameworks: ['mocha', 'chai'],
