@@ -6,9 +6,9 @@ const TotoListItem = ({ Title, Completed }) => {
     completed: Completed
   });
 
-  return (<li className={ itemClassName }>
+  return (<div className={ itemClassName }>
     { Title }
-  </li>);
+  </div>);
 };
 
 TotoListItem.propTypes = {

@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "check-coverage": "istanbul check-coverage --statements 0 --branches 0 --functions 0 --lines 0",
+    "commit": "git-cz",
     "copy-files": "cp ./app/favicon.ico dist",
     "clean": "rm -rf dist && mkdir dist",
     "clean-dist": "npm-run-all --serial clean copy-files",
@@ -34,7 +35,9 @@
     "babel-preset-react": "^6.5.0",
     "babel-preset-stage-2": "^6.5.0",
     "chai": "^3.5.0",
+    "commitizen": "^2.8.2",
     "css-loader": "^0.23.1",
+    "cz-conventional-changelog": "^1.1.6",
     "es6-promise": "^3.2.1",
     "eslint": "^2.13.0",
     "eslint-config-airbnb": "^9.0.1",
@@ -57,6 +60,7 @@
     "npm-run-all": "^2.2.0",
     "path": "^0.12.7",
     "phantomjs-prebuilt": "^2.1.7",
+    "react-addons-test-utils": "^15.1.0",
     "style-loader": "^0.13.1",
     "webpack": "^2.1.0-beta.6",
     "webpack-dev-server": "^1.14.1",
@@ -87,5 +91,9 @@
     "reselect": "^2.5.1",
     "whatwg-fetch": "^1.0.0"
   },
-  "config": {}
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  }
 }
